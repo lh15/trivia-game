@@ -1,121 +1,179 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,700');
-
 .login-page {
-    width: 360px;
-    padding: 2% 0 0;
-    margin: auto;
+  width: 360px;
+  padding: 2% 0 0;
+  margin: auto;
 }
 
 .form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .form input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 #first_name, #last_name {
-    width: 49%;
+  width: 49%;
 }
 
 .form button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }
 
 .form button:hover, .form button:active, .form button:focus {
-    background: #43A047;
+  background: #43A047;
 }
 
 .form .message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
 }
 
 .form .message a {
-    color: #4CAF50;
-    text-decoration: none;
+  color: #4CAF50;
+  text-decoration: none;
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 300px;
-    margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 div[ng-message], .errorMessage {
-    color: lightcoral;
-    font-size: .8em;
-    margin-top: -10px;
-    margin-bottom: 10px;
+  color: lightcoral;
+  font-size: .8em;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 #container {
-    font-family: 'Spectral', serif;
-    text-align: center;
-    margin-top: 40px;
-    font-weight: 700;
-    font-style: italic;
+  font-family: 'Spectral', serif;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
+  font-style: italic;
 }
 
 body {
-    background: linear-gradient(to left, #76b852, #8DC26F);
-    background: linear-gradient(to right, lightyellow, skyblue);
-    font-family: "Roboto", sans-serif;
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: linear-gradient(to right, lightyellow, skyblue);
+  font-family: "Roboto", sans-serif;
 }
-.myContainer{
+
+.myContainer {
   width: 60%;
   margin: 5px auto;
 }
-.search{
-  width: 30%;
-  float: right;
-  font-size: 1.5em;
+
+.search {
+  /* width: 44%; */
+  /* float: right; */
+  /* font-size: 1.5em; */
+  margin-top: 56px;
+  margin-bottom: 20px;
 }
-.search .form-control{
+
+.search .form-control {
   display: inline-block;
   width: 70% !important;
   margin-left: 15px;
 }
-.disabled{
-    background: gray !important;
-    color: lightgray !important;
+
+.disabled {
+  background: gray !important;
+  color: lightgray !important;
 }
-.triviaQuestion{
+
+.triviaQuestion {
   border: 2px solid darkgray;
   padding: 20px;
   margin: 10px auto;
 }
-#recentGame{
+
+#recentGame {
   background: green;
   color: white;
   height: 50px
+}
+a {
+  font-size: 1.5em;
+  margin: 0px 8px;
+}
+
+@media only screen and (max-width: 480px) {
+  #container {
+    /*font-family: 'Gudea', sans-serif;*/
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 700;
+    /* width: 80%; */
+    /* font-style: italic; */
+    padding: 10px;
+  }
+  .bdayPH {
+    position: absolute;
+    right: 121px;
+    bottom: 167px;
+    font-weight: 300;
+    color: gray;
+    /*font-family: "Roboto", sans-serif;*/
+    font-size: 14px;
+  }
+  .login-page {
+    width: 100%;
+    /* padding: 2% 0 0; */
+    margin: 0px auto;
+  }
+  input, select, textarea {
+    background: lightgray;
+    opacity: .8;
+  }
+  td, th {
+    padding: 0px;
+  }
+  table button {
+    background: white;
+  }
+  .myContainer {
+    width: 95%;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .search {
+    /*width: 44%;*/
+    /* float: right; */
+    /* font-size: 1.5em; */
+    margin: 20px auto;
+  }
 }

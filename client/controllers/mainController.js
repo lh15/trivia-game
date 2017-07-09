@@ -10,7 +10,8 @@ myApp.controller('mainController', ['$scope', 'mainFactory', '$location', '$cook
   $scope.question1 = null;
   $scope.question2 = null;
   $scope.question3 = null;
-  $scope.recentGame = mainFactory.recentGame;
+  $scope.recentGame = {};
+  
 
 
 
@@ -57,6 +58,7 @@ myApp.controller('mainController', ['$scope', 'mainFactory', '$location', '$cook
   function setGames(data) {
     $scope.games = data;
     $scope.game = {};
+    $scope.recentGame = mainFactory.recentGame;
   }
 
   $scope.index = function () {
@@ -99,6 +101,7 @@ myApp.controller('mainController', ['$scope', 'mainFactory', '$location', '$cook
   $scope.logOut = function () {
     $cookies.remove('currentUser');
     $scope.currentUser = null;
+    mainFactory.recentGame = {};
     $location.path("/login");
   }
 }])
