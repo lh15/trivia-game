@@ -1,0 +1,60 @@
+
+<p>Hi {{currentUser.first_name}}</p>
+<p>Choose an answer for each of the questions and submit the test once done.</p>
+<p>Good luck!</p>
+<div class="myContainer">
+  <div class="triviaQuestion">
+  <p>1. {{questions[0].question}}</p>
+  <form >
+    <label>
+    <input type="radio" ng-model="question1" ng-value="questions[0].answer" checked >
+    {{questions[0].answer}}
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="question1" ng-value="questions[0].fakeAnswer1" >
+    {{questions[0].fakeAnswer1}}
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="question1" ng-value="questions[0].fakeAnswer2" >
+    {{questions[0].fakeAnswer2}}
+  </label><br/>
+  </form>
+</div>
+<div class="triviaQuestion">
+  <p>2. {{questions[1].question}}</p>
+  <form name="question3" >
+    <label>
+    <input type="radio" ng-model="question2" ng-value="questions[1].fakeAnswer1" checked >
+    {{questions[1].fakeAnswer1}}
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="question2" ng-value="questions[1].answer" >
+    {{questions[1].answer}}
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="question2" ng-value="questions[1].fakeAnswer2" >
+    {{questions[1].fakeAnswer2}}
+  </label><br/>
+  </form>
+</div>
+<div class="triviaQuestion">
+  <p>3. {{questions[2].question}}</p>
+  <form name="question3" >
+    <label>
+    <input type="radio" ng-model="question3" ng-value="questions[2].fakeAnswer1"  name="question3" checked >
+    {{questions[2].fakeAnswer1}}
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="question3" ng-value="questions[2].fakeAnswer2" name="question3" >
+    {{questions[2].fakeAnswer2}}
+  </label><br/>
+    <label>
+    <input type="radio" ng-model="question3" ng-value="questions[2].answer" name="question3" >
+    {{questions[2].answer}}
+  </label><br/>
+  </form>
+</div>
+<a href="#!/dashboard"><button class="btn btn-default">Cancel</button></a>
+<button  type="" ng-click="play()" >submit</button>
+
+</div>

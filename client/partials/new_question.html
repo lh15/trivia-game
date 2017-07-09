@@ -1,0 +1,41 @@
+<a href="/">Home</a>
+<a href="#!/newquestion">Add a question</a>
+<a href="" ng-click="logOut()">logout</a>
+
+<h2>New Question</h2>
+<div class="myContainer">
+  <form ng-submit="createQuestion()" name="questionForm" novalidate>
+    <div class="form-group">
+      <label>Question</label>
+      <textarea class="form-control" rows="5" ng-model="newQuestion.question" name="question" minlength="15"></textarea>
+    </div>
+    <div ng-messages="questionForm.question.$error" ng-if='questionForm.$dirty'>
+      <div ng-message="minlength">This field must be 15 characters long.</div>
+    </div>
+    <div class="form-group">
+      <label>Correct Answer</label>
+      <input type="text" class="form-control" ng-model="newQuestion.answer" name="answer" required>
+    </div>
+    <div ng-messages="questionForm.answer.$error" ng-if='questionForm.$dirty'>
+      <div ng-message="required">required</div>
+    </div>
+    <div class="form-group">
+      <label>Fake answer 1</label>
+      <input type="text" class="form-control" ng-model="newQuestion.fakeAnswer1" name="fakeAnswer1" required>
+    </div>
+    <div ng-messages="questionForm.fakeAnswer1.$error" ng-if='questionForm.$dirty'>
+      <div ng-message="required">required</div>
+    </div>
+    <div class="form-group">
+      <label>Fake answer 1</label>
+      <input type="text" class="form-control" ng-model="newQuestion.fakeAnswer2" name="fakeAnswer2" required>
+    </div>
+    <div ng-messages="questionForm.fakeAnswer2.$error" ng-if='questionForm.$dirty'>
+      <div ng-message="required">required</div>
+    </div>
+    <a href="#!/dashboard"><button class="btn btn-default">Cancel</button></a>
+    <button type="submit" class="btn btn-default" ng-disabled="questionForm.$invalid" ng-class="{'disabled': questionForm.$invalid}">Add Question</button>
+
+  </form>
+  {{newQuestion}}
+</div>

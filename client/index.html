@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+
+<head>
+  <title>trivia game</title>
+  <script src="angular/angular.js"></script>
+  <script src="angular-route/angular-route.js"></script>
+  <script src="angular-cookies/angular-cookies.js"></script>
+  <script src="angular-messages/angular-messages.js"></script>
+  <script src='main.js'></script>
+  <script src='factories/mainFactory.js'></script>
+  <script src='factories/registerFactory.js'></script>
+  <script src='factories/loginFactory.js'></script>
+  <script src='controllers/mainController.js'></script>
+  <script src='controllers/registerController.js'></script>
+  <script src='controllers/loginController.js'></script>
+  <link href="./static/css/styles.css" rel="stylesheet">
+  <link href="./static/css/form_styles.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+  <div id="container">
+    <div ng-view=''>
+      <!--partials will load here-->
+    </div>
+  </div>
+
+</body>
+
+</html>

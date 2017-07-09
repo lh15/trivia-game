@@ -1,0 +1,27 @@
+<style>
+    .form .register-form {
+        display: block;
+    }
+</style>
+<h1>Welcome to the trivia game!</h1>
+    <p>Please sign in or register to begin</p>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" ng-submit="login()" name="loginForm" novalidate>
+            <input type="email" placeholder="email" ng-model="user.email" name="email" required/>
+            <div ng-messages="loginForm.$submitted && loginForm.email.$error">
+                <div ng-message="required">What is your email address?</div>
+            </div>
+            <input type="password" placeholder="password" ng-model="user.pw" name="pw" required/>
+            <div ng-messages="loginForm.$submitted && loginForm.pw.$error">
+                <div ng-message="required">What is your password?</div>
+            </div>
+            <div class="errorMessage" >
+                {{validationErrors}}
+            </div>
+            <button ng-disabled="loginForm.$invalid" ng-class="{'disabled': loginForm.$invalid}">login</button>
+            <p class="message">Not registered? <a href="#!/register">Create an account</a></p>
+        </form>
+        <!--<p>User: {{user}}</p>-->
+    </div>
+</div>

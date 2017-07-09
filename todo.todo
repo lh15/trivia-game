@@ -1,0 +1,33 @@
+ New full MEAN Project Steps:
+        ☐ Create server.js
+            (fill in steps later, for now copy)
+        ☐ npm init and install dependencies 
+        ☐ bower init and install dependencies 
+        ☐ create server folder
+            ☐ config folder
+                ☐ mongoose.js
+                    ☐ require mongoose, fs, path. Connect mongoose with unique db name. Set path to models folder with the schemas and read all files with loop...(look at file fopr reference)
+                ☐ routes.js 
+                    ☐ require mongoose, import models, require controllers, module.exports the routes 
+            ☐ controllers folder    
+                ☐ {{model name plural}}.js
+                    ☐ require mongoose, and import model. Module.exports all controller methods.
+            ☐ models folder 
+                ☐ {{model name}}.js
+                    ☐ require mongoose, save mongoose schema to var, create schema with new keyword, register schema as a mongoose model, save model to var.
+
+        ☐ Create Client folder
+            ☐ index.html
+                ☐ ng-app in html tag, include angular dependencies scripts, controllers and factories scripts, css, 
+                ☐ div with ng-view for partials
+            ☐ main.js
+                ☐ create angular app, to var
+                ☐ .config $routeprovider for routes
+            ☐ controllers folder
+                ☐ {{controllerName}}.js
+            ☐ factories folder
+                ☐ {{factoryName}}.js
+            ☐ partials folder   
+                ☐ {{partialname}}.html
+            ☐ static folder
+                ☐ css...
